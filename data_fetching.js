@@ -25,7 +25,7 @@
           throw new Error ('Unknown Error');
         })
         .catch (error => {
-          console.log(error, 'catch block triggered');
+          console.log(error.message, 'catch block triggered');
           
         })
       }
