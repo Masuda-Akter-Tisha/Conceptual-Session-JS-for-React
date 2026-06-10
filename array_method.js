@@ -41,6 +41,7 @@ const students = [
   },
 ];
 
+// map
 // const newStudent = students.map (stu => 
 //    stu.isPassed === true 
 //     ? {...stu, isGood : true} 
@@ -50,5 +51,9 @@ const students = [
 const newStudent = students.map (stu => {
   return {...stu, isGood : stu.isPassed === true ? true : false}
 } )
-    console.log(newStudent);
-    
+    // console.log(newStudent);
+
+  // filter
+  const newStu = students.filter (st => st.isPassed === false);
+  console.log(newStu);
+   
