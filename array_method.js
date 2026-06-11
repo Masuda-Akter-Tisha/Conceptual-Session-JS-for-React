@@ -54,6 +54,34 @@ const newStudent = students.map (stu => {
     // console.log(newStudent);
 
   // filter
-  const newStu = students.filter (st => st.isPassed === false);
-  console.log(newStu);
+  const newStu = students.filter (st => st.isPassed === false && st.id === 1);
+
+  if (newStu != 0) {
+    // console.log('right information');
+  }
+  else {
+    // console.log('wrong information'); 
+  }
+
+  // console.log(newStu);
+
+  // find
+   const age = students.find (st => st.age < 30 && st.marks < 20);
+  //  console.log(age);
    
+  // chaining method
+  const studentInfo = students.filter (st => st.department === 'CSE' && st.age < 30).map (st => ({...st, job: 'web-development'}));
+  console.log(studentInfo);
+  
+  // reduce
+  const arr = [10, 30, 20, 45];
+  // let sum = 0;
+  // for (const n of arr) {
+  //   sum += n;   //sum = sum + n;
+  // }
+  // console.log(sum);
+
+const total = arr.reduce ((acc, curr) => acc + curr, 0);
+console.log(total);
+
+  
