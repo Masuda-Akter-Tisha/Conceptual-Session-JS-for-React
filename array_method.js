@@ -6,6 +6,7 @@ const students = [
     marks: 85,
     department: "CSE",
     isPassed: true,
+    company : null
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const students = [
     marks: 45,
     department: "EEE",
     isPassed: false,
+    company : null
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const students = [
     marks: 92,
     department: "CSE",
     isPassed: true,
+    company : null
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const students = [
     marks: 65,
     department: "BBA",
     isPassed: true,
+    company : null
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const students = [
     marks: 38,
     department: "CSE",
     isPassed: false,
+    company : null
   },
 ];
 
@@ -70,7 +75,7 @@ const newStudent = students.map (stu => {
   //  console.log(age);
    
   // chaining method
-  const studentInfo = students.filter (st => st.department === 'CSE' && st.age < 30).map (st => ({...st, job: 'web-development'}));
+  const studentInfo = students.filter (st => st.department === 'CSE' && st.age < 30).map (st => ({...st, job: 'web-development', company : st.company?.name}));
   console.log(studentInfo);
   
   // reduce

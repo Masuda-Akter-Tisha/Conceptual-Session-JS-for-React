@@ -23,6 +23,11 @@ const student = {
     age : 24,
     'is good' : {
         brain : true,
+        skill : undefined,
     }
 }
-console.log(student['is good']?.work);
+// console.log(student['is good']?.work);
+
+// console.log(student['is good'].skill);
+
+console.log(student.job);
